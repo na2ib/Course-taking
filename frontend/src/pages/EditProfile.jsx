@@ -31,7 +31,7 @@ const EditProfile = ({ student, closeModal }) => {
             const token = localStorage.getItem('token');
             formData.id = Number(formData.id)
             await axios.post(
-                'http://localhost:3000/api/profile/update',
+                'https://course-taking-9iv6.onrender.com/api/profile/update',
                 formData,
                 {
                     headers: {
