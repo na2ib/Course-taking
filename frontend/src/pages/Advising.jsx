@@ -12,7 +12,7 @@ function Advising() {
     const fetchCurrentCourse = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.get('http://localhost:3000/api/current-course', {
+            const response = await axios.get('https://course-taking-9iv6.onrender.com/api/current-course', {
                 headers: {
                     Authorization: token
                 }
@@ -28,7 +28,7 @@ function Advising() {
         const token = localStorage.getItem('token');
         (async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/courses', {
+                const response = await axios.get('https://course-taking-9iv6.onrender.com/api/courses', {
                     headers: {
                         Authorization: token
                     }
@@ -55,7 +55,7 @@ function Advising() {
 
         try {
 
-            const response = await axios.post('http://localhost:3000/api/submit-course', { selectedCourse }, {
+            const response = await axios.post('https://course-taking-9iv6.onrender.com/api/submit-course', { selectedCourse }, {
                 headers: {
                     Authorization: token
                 }
@@ -86,7 +86,7 @@ function Advising() {
         }
 
         try {
-            const response = await axios.delete('http://localhost:3000/api/drop-course', {
+            const response = await axios.delete('https://course-taking-9iv6.onrender.com/api/drop-course', {
                 headers: {
                     Authorization: token
                 },
