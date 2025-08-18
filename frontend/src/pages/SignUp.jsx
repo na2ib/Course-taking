@@ -32,7 +32,7 @@ function SignUp() {
         try {
             data.student_id = Number(data.student_id)
             console.log('FORM DATA: ', data);
-            const response = await axios.post(`http://localhost:3000/api/signup`, data)
+            const response = await axios.post(`https://course-taking-9iv6.onrender.com/api/signup`, data)
 
             if (response.data.success) {
                 toast.success(response.data.message);
