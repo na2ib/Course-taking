@@ -10,7 +10,7 @@ function Home() {
     const token = localStorage.getItem('token');
     const fetchStudents = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/profile`, {
+            const response = await axios.get(`https://course-taking-9iv6.onrender.com/api/profile`, {
                 headers: {
                     Authorization: token
                 }
