@@ -11,7 +11,7 @@ function Courses() {
     const fetchCurrentCourse = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.get('http://localhost:3000/api/current-course', {
+            const response = await axios.get('https://course-taking-9iv6.onrender.com/api/current-course', {
                 headers: {
                     Authorization: token
                 }
@@ -26,7 +26,7 @@ function Courses() {
     const getCourseDetails = async () => {
         try {
             if (courseCode) {
-                const response = await axios.post('http://localhost:3000/api/current-course-details', { courseCode })
+                const response = await axios.post('https://course-taking-9iv6.onrender.com/api/current-course-details', { courseCode })
                 setCourseDetail(response.data);
                 console.log('details', response.data);
 
