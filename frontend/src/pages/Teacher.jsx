@@ -16,7 +16,7 @@ function Teacher() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/add-course', {
+      const response = await axios.post('https://course-taking-9iv6.onrender.com/api/add-course', {
         courseName,
         courseCode,
         courseDetail,
