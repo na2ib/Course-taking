@@ -1,40 +1,38 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
-import SignIn from '../pages/SignIn'
-import SignUp from '../pages/SignUp'
-import PrivateRoutes from '../utils/PrivateRoutes'
-import PublicRoutes from '../utils/PublicRoutes'
-import Advising from '../pages/Advising'
-import Courses from '../pages/Courses'
-import Teacher from '../pages/Teacher'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
+import PrivateRoutes from "../utils/PrivateRoutes";
+import PublicRoutes from "../utils/PublicRoutes";
+import Advising from "../pages/Advising";
+import Courses from "../pages/Courses";
+import Teacher from "../pages/Teacher";
 
 function AllRoutes() {
     return (
         <div>
             <Routes>
-
-                <Route path='/signin' element={
-                    <PublicRoutes>
-                        <SignIn />
-                    </PublicRoutes>
-                }
+                <Route
+                    path="/signin"
+                    element={
+                        <PublicRoutes>
+                            <SignIn />
+                        </PublicRoutes>
+                    }
                 />
-                <Route path='/signup' element={
-                    <PublicRoutes>
-                        <SignUp />
-                    </PublicRoutes>
-                }
+                <Route
+                    path="/signup"
+                    element={
+                        <PublicRoutes>
+                            <SignUp />
+                        </PublicRoutes>
+                    }
                 />
-                <Route path='/teacher' element={
-                    
-                        <Teacher />
-                    
-                }
-                />
+                <Route path="/teacher" element={<Teacher />} />
 
                 <Route
-                    path='/'
+                    path="/"
                     element={
                         <PrivateRoutes>
                             <Home />
@@ -42,7 +40,7 @@ function AllRoutes() {
                     }
                 />
                 <Route
-                    path='/advising'
+                    path="/advising"
                     element={
                         <PrivateRoutes>
                             <Advising />
@@ -51,7 +49,7 @@ function AllRoutes() {
                 />
 
                 <Route
-                    path='/courses'
+                    path="/courses"
                     element={
                         <PrivateRoutes>
                             <Courses />
@@ -60,7 +58,7 @@ function AllRoutes() {
                 />
             </Routes>
         </div>
-    )
+    );
 }
 
-export default AllRoutes
+export default AllRoutes;

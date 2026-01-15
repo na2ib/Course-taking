@@ -1,8 +1,5 @@
-# Node.js dependencies
 node_modules/
 
-# Environment Variables (Don't upload your .env file)
 .env
 
-# Log files
 *.log
